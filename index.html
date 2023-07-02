@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi primera pagina con Leaflet</title>
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.0-dist/css/bootstrap.min.css"
+    />
+    <!-- Leaflet JavaScript local-->
+    <script src="js/leaflet.js"></script>
+    <!-- cajeros.js -->
+    <script src="./data/caj_BNB_proyect.js"></script>
+    <script src="./data/munOruro.js"></script>
+    <script src="./data/lugares.js"></script>
+    <script src="./data/cajerosBUnion.js"></script> 
+    <script src="./data/cajerosOruro.js"></script>
+    <script src="./data/puntosT.js"></script>
+
+    <script src="./bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/active.js" defer></script>
+    <!-- Estilo de la pagina principal -->
+    <style></style>
+  </head>
+  <body>
+    <div class="col-md-12 img-cont ps-4 pe-4 bk">
+      <img alt="Banner" src="./images/banner.png" id="banner" />
+    </div>
+    <nav class="bg-light">
+      <ul class="nav nav-tabs">
+        <li data-target="#mapa" class="nav-item">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li data-target="#mapa1" class="nav-item">
+          <a class="nav-link" href="#">Atractivos Turisticos</a>
+        </li>
+        <li data-target="#mapa2" class="nav-item">
+          <a class="nav-link" href="#">Cajeros</a>
+        </li>
+        <li data-target="#mapa3" class="nav-item">
+          <a class="nav-link" href="#">Puntos de comida</a>
+        </li>
+        <li data-target="#mapa4" class="nav-item">
+          <a class="nav-link" href="#">Acerca de...</a>
+        </li>
+      </ul>
+    </nav>
+    <div data-content class="container active" id="mapa">
+      <!-- <select class="form-select" aria-label="Default select example">
+        <option selected>Seleccione un lugar Turistico</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select> -->
+      <!-- <div id="mapa0"></div> -->
+    </div>
+
+    <!-- <div data-content class="container active" id="mapa">
+     
+      
+    </div> -->
+
+    <div data-content class="container" id="mapa1">
+      <h3>Atractivos Turisticos</h3>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+          </tr>
+        </thead>
+        <tbody id="res"></tbody>
+      </table>
+    </div>
+    <div data-content class="container" id="mapa2">
+      <h3>Cajeros</h3>
+      <!-- <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+          </tr>
+        </thead>
+        <tbody id="res1"></tbody>
+      </table> -->
+      <!-- select -->
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Seleccione la entidad bancaria</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div data-content class="container" id="mapa3">
+      <h2>Puntos de comida</h2>
+    </div>
+    <div data-content class="container" id="mapa4"><h2>Acerca de...</h2></div>
+
+    <!-- Codigo de javascript embebido -->
+    <script src="./js/inicio.js"></script>
+
+    <script src="./js/ajax.js" refer></script>
+  </body>
+</html>
